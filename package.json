@@ -1,0 +1,36 @@
+{
+  "name": "sennaar-fish",
+  "version": "1.0.0",
+  "description": "Babel Fish simpleton for Chants of Sennaar",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SparK-Cruz/sennaar-fish.git"
+  },
+  "keywords": [
+    "Glyph",
+    "chants",
+    "of",
+    "sennaar",
+    "cos",
+    "translate",
+    "babel",
+    "babel",
+    "fish",
+    "babelfish"
+  ],
+  "author": "Roger Cruz <dev.rogercruz@gmail.com>",
+  "license": "CC0-1.0",
+  "bugs": {
+    "url": "https://github.com/SparK-Cruz/sennaar-fish/issues"
+  },
+  "homepage": "https://github.com/SparK-Cruz/sennaar-fish#readme",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}

@@ -1,0 +1,3 @@
+[submodule "fonts/devotee"]
+	path = fonts/devotee
+	url = https://github.com/leo3065/Devotee-Plus.git

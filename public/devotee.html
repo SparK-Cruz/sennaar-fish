@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf8" />
+        <title>Sennaar Fish</title>
+        <style>
+            .container {
+                position: relative;
+                width: 90%;
+                height: 90%;
+                margin: 10px auto;
+            }
+            .container .field {
+                position: relative;
+                float: left;
+                width: calc(50% - 10px);
+                height: 100%;
+            }
+            .container .field:not(:first-child) {
+                margin-left: 20px;
+            }
+            .container .field textarea {
+                display: block;
+                height: 450px;
+                width: 100%;
+            }
+            .container::after {
+                float: left;
+                content: '';
+                clear: both;
+            }
+
+            #eng {
+                font-family: 'Courier New', Courier, monospace;
+            }
+
+            #dev {
+                font-family: 'Devotee';
+                font-size: 32px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="field">
+                <label>English: <textarea id="eng"></textarea></label>
+                <label><input id="strip" type="checkbox" checked /> Remove unknown words</label>
+            </div>
+            <div class="field"><label>Devotese: <textarea id="dev" spellcheck="false" placeholder="MiMiVqMzMzMz"></textarea></label></div>
+        </div>
+        <script type="module">
+            import Glyphs from "/devotee.js";
+
+            const engElement = document.getElementById('eng');
+            const stripElement = document.getElementById('strip');
+            const devElement = document.getElementById('dev');
+
+            function update() {
+                devElement.value = Glyphs.parse(engElement.value, {strip: stripElement.checked});
+            }
+
+            engElement.addEventListener('change', update);
+            stripElement.addEventListener('change', update);
+        </script>
+    </body>
+</html>
