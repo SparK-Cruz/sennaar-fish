@@ -12,6 +12,7 @@
             .container {
                 position: relative;
                 width: 90%;
+                max-width: 960px;
                 height: 90%;
                 margin: 10px auto;
             }
@@ -64,7 +65,7 @@
                 devElement.value = Glyphs.parse(engElement.value, {strip: stripElement.checked});
             }
 
-            engElement.addEventListener('change', update);
+            engElement.addEventListener('input', update);
             stripElement.addEventListener('change', update);
         </script>
     </body>
